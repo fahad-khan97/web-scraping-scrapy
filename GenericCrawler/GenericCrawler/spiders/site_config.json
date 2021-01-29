@@ -1,0 +1,22 @@
+{
+    "TOI":{
+        "url": "https://timesofindia.indiatimes.com/",
+        "allowed_domain": ["timesofindia.indiatimes.com"],
+        "mandatory": ["title", "article"],
+        "parse": {
+            "date": ".//div[@class = '_3Mkg- byline']/text() | .//span[@class='time_cptn']//text() | .//div[@dateval]/text()",
+            "title": ".//h1//text()",
+            "article": ".//div[@class = '_1_Akb clearfix  ']//text() | .//div[@class = 'Normal']//text() | .//div[@class = '_3WlLe.clearfix']"
+        }
+    },
+    "India_Today":{
+        "url": "https://www.indiatoday.in/",
+        "allowed_domain": ["indiatoday.in/"],
+        "mandatory": ["title", "article"],
+        "parse": {
+            "date": ".//dt[@class = 'update-data']//text()",
+            "title": ".//h1[@itemprop = 'headline']//text()",
+            "article": ".//div[@itemprop = 'articleBody']//text()"        
+        }        
+    }
+}
